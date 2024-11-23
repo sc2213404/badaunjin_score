@@ -1,8 +1,8 @@
 # dateload
 - timecode to frame
 - calculate frame sampling in video
-      * max time steps
-      * frame count
+     * max time steps
+     * frame count
 - data process
       * enhancement
       * normalization
