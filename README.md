@@ -2,10 +2,10 @@
 
 ```mermaid
 flowchart TD
-    A[image] --> B[TemporalConv]
+    A[video] --> B[TemporalConv]
     B --> C[CheConv]
     C --> D[TemporalConv]
-    D --> E[preduction]
+    D --> E[score]
 ```
 
 
@@ -14,4 +14,8 @@ flowchart TD
 
 # STAttention
 ---
-#STGCNMultiTask
+
+# STGCNMultiTask
+
+1. Predictive classification
+2. mark
