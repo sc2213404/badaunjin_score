@@ -19,8 +19,8 @@ flowchart TD
 
 1. Predictive classification
    feature fusion
-       > 8 angle
-       > 64 characteristic
+   > 8 angle
+   > 64 characteristic
    
    first attention
 3. mark
