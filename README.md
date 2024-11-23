@@ -1,11 +1,20 @@
 # STConv
 
+```mermaid
 flowchart TD
-    A@{ shape: processes, label: "TemporalConv" }
+    A[TemporalConv]
+```
+
+```mermaid
 flowchart TD
-    A@{ shape: processes, label: "CheConv" }
+    A[CheConv]
+```
+
+```mermaid
 flowchart TD
-    A@{ shape: processes, label: "TemporalConv" }
+    A[TemporalConv]
+```
+
     
 ---
 
