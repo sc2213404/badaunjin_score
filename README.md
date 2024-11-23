@@ -18,4 +18,10 @@ flowchart TD
 # STGCNMultiTask
 
 1. Predictive classification
-2. mark
+   feature fusion
+    > 8 angle
+    > 64 characteristic
+   
+   first attention
+3. mark
+   second attention
