@@ -4,9 +4,9 @@
      * max time steps
      * frame count
 - data process
-      * enhancement
-      * normalization
-      * filling
+    * enhancement
+    * normalization
+    * filling
 - clarify
   > cross entropy loss
 - mark
