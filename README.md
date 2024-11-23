@@ -1,4 +1,4 @@
-#STConv
+# STConv
 
 flowchart TD
     A@{ shape: processes, label: "TemporalConv" }
@@ -7,6 +7,6 @@ flowchart TD
 flowchart TD
     A@{ shape: processes, label: "TemporalConv" }
 ---
-#STAttention
+# STAttention
 ---
 #STGCNMultiTask
