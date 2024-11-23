@@ -1,0 +1,57 @@
+digraph STGCNMultiTask_Model {
+	fontname=Helvetica fontsize=12 rankdir=LR
+	node [color=lightgrey fontname=Helvetica fontsize=10 shape=rectangle style=filled]
+	subgraph cluster_STGCNMultiTask {
+		color=lightblue label=STGCNMultiTask style=filled
+		subgraph cluster_STConvLayers {
+			color=lightyellow label="STConv Layers" style=filled
+			STConv1 [label="STConv Layer 1"]
+			STConv2 [label="STConv Layer 2"]
+			STConv3 [label="STConv Layer 3"]
+		}
+		STAttention [label=STAttention]
+		Classifier [label=Classifier]
+		KeyActionDetector [label="Key Action Detector"]
+		AngleFC [label="Angle FC"]
+		GlobalPool [label="Global Avg Pool"]
+	}
+	subgraph cluster_STConv1 {
+		color=lightgreen label=STConv1 style=filled
+		TemporalConv1_1 [label=TemporalConv1]
+		ChebConv1 [label=ChebConv]
+		TemporalConv2_1 [label=TemporalConv2]
+	}
+	subgraph cluster_STConv2 {
+		color=lightgreen label=STConv2 style=filled
+		TemporalConv1_2 [label=TemporalConv1]
+		ChebConv2 [label=ChebConv]
+		TemporalConv2_2 [label=TemporalConv2]
+	}
+	subgraph cluster_STConv3 {
+		color=lightgreen label=STConv3 style=filled
+		TemporalConv1_3 [label=TemporalConv1]
+		ChebConv3 [label=ChebConv]
+		TemporalConv2_3 [label=TemporalConv2]
+	}
+	cluster_STConvLayers -> cluster_STConv1
+	cluster_STConvLayers -> cluster_STConv2
+	cluster_STConvLayers -> cluster_STConv3
+	cluster_STConvLayers -> STAttention
+	cluster_STConvLayers -> Classifier
+	cluster_STConvLayers -> KeyActionDetector
+	cluster_STConvLayers -> AngleFC
+	cluster_STConvLayers -> GlobalPool
+	STConv1 -> TemporalConv1_1
+	STConv1 -> ChebConv1
+	STConv1 -> TemporalConv2_1
+	STConv2 -> TemporalConv1_2
+	STConv2 -> ChebConv2
+	STConv2 -> TemporalConv2_2
+	STConv3 -> TemporalConv1_3
+	STConv3 -> ChebConv3
+	STConv3 -> TemporalConv2_3
+	STAttention -> Classifier
+	Classifier -> KeyActionDetector
+	KeyActionDetector -> AngleFC
+	AngleFC -> GlobalPool
+}
