@@ -2,18 +2,21 @@
 
 ```mermaid
 flowchart TD
-    A[TemporalConv]
+    A[TemporalConv] --> B[CheConv]
 ```
 
 ```mermaid
 flowchart TD
-    A[CheConv]
+    A[CheConv] --> B[TemporalConv]
 ```
 
 ```mermaid
 flowchart TD
-    A[TemporalConv]
+    A[TemporalConv] --> B[CheConv]
+    B --> C[AnotherConv]
+    C --> D[FinalConv]
 ```
+
 
     
 ---
